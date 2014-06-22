@@ -110,7 +110,7 @@ public function calculate_totals( $totals ) {
         $extra_charges_type_value = get_option( $extra_charges_type); 
         if($extra_charges){
             if($extra_charges_type_value=="percentage"){
-                $totals -> cart_contents_total = $totals -> cart_contents_total + round(($totals -> cart_contents_total*$extra_charges)/100);
+                $totals -> cart_contents_total = $totals -> cart_contents_total + round(($totals -> cart_contents_total*$extra_charges)/100,2);
             }else{
                 $totals -> cart_contents_total = $totals -> cart_contents_total + $extra_charges;
             }
@@ -118,7 +118,8 @@ public function calculate_totals( $totals ) {
             $this -> current_gateway_extra_charges = $extra_charges;
             $this -> current_gateway_extra_charges_type_value = $extra_charges_type_value;
             add_action( 'woocommerce_review_order_before_order_total',  array( $this, 'add_payment_gateway_extra_charges_row'));
-
+          
+            add_action( 'woocommerce_cart_totals_before_order_total',  array( $this, 'add_payment_gateway_extra_charges_row'));
         }
 
     }
