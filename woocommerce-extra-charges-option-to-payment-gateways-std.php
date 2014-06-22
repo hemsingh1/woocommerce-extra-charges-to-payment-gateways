@@ -46,10 +46,10 @@ class WC_PaymentGateway_Add_extra_std_Charges{
          // Get current tab/section
         $current_tab        = ( empty( $_GET['tab'] ) ) ? '' : sanitize_text_field( urldecode( $_GET['tab'] ) );
         $current_section    = ( empty( $_REQUEST['section'] ) ) ? '' : sanitize_text_field( urldecode( $_REQUEST['section'] ) );
-        if($current_tab == 'checkout' && $current_section!=''){
+        if($current_tab == 'checkout' && ($current_section=='wc_gateway_bacs'||$current_section=='wc_gateway_cheque'||$current_section=='wc_gateway_cod')){
             $gateways = $woocommerce->payment_gateways->payment_gateways();
             foreach($gateways as $gateway){
-                if( (strtolower(get_class($gateway))==wc_gateway_bacs  || strtolower(get_class($gateway))==wc_gateway_cheque || strtolower(get_class($gateway))==wc_gateway_cod) && strtolower(get_class($gateway))==$current_section){
+                if(strtolower(get_class($gateway)==$current_section)){
                     $current_gateway = $gateway -> id;
                     $extra_charges_id = 'woocommerce_'.$current_gateway.'_extra_charges';
                     $extra_charges_type = $extra_charges_id.'_type';
