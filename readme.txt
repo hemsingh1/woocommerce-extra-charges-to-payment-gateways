@@ -1,11 +1,13 @@
  === Plugin Name ===
 Contributors: hemsingh1
-Tags: woocommerce, payment gateway
+Donate link: http://mydealstm.com/donate/
+Tags: woocommerce, payment gateway, ecommerce, e-commerce, commerce, woothemes, wordpress ecommerce, affiliate, store, sales, sell, shop, shopping, cart, checkout, configurable, variable, widgets, reports, download, downloadable, digital, inventory, stock, reports, shipping, tax
 Requires at least: 3.9.0
 Tested up to: 3.9.1
 Stable tag: 1.0.1
 Version: 1.0.1
-
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
 
 Works with WooCommerce 2.1.11 and above only.
@@ -27,6 +29,11 @@ For Support Please Visit
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. That's it :)
 
+
+== Frequently Asked Questions ==
+
+= A question that someone might have =
+
 == Screenshots ==
 1. Frontend
 2. Extra Charges Field
@@ -38,5 +45,11 @@ For Support Please Visit
 
 == Changelog ==
 
-= 0.1 - 22/06/2014 =
+= 1.0.1 - 22/06/2014 =
 * Initial release!
+
+== Upgrade Notice ==
+
+
+= 1.0.2 =
+Will upgrade to new release once, we have more features.
